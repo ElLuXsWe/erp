@@ -27,7 +27,8 @@ jobs:
 
       - run: npm install
 
-      - run: npx jest --coverage
+      # Corrección aquí para evitar 'Permission denied'
+      - run: npx -- jest --coverage
 
   frontend-tests:
     name: Frontend - Pruebas unitarias y cobertura
